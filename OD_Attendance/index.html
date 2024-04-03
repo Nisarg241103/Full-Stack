@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Feedbak</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <!-- Iconscout Link  -->
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f0f0f0;
+                margin: 0;
+                margin-top: 2rem;
+            }
+
+            .header .logo img {
+                height: 50px;
+                width: auto;
+            }
+
+            .header .navbar a {
+                margin-left: 2rem;
+                font-size: 1.9rem;
+                font-weight: 500;
+                color: #c73335e7;
+            }
+
+            h1 {
+                text-align: center;
+            }
+
+            .card-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                grid-gap: 20px;
+                padding: 20px;
+            }
+
+            .card {
+                background-color: #fff;
+                font-size: medium;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                max-width: 500px;
+                word-wrap: break-word;
+                border-bottom: 3px solid #c73336;
+                border-top: 3px solid #183357;
+            }
+
+            .card h2 {
+                margin-top: 0;
+                color: #183357;
+            }
+
+            .card p {
+                margin: 5px 0;
+                color: #666;
+            }
+
+            .card .info {
+                color: #666;
+            }
+
+            .card .subject {
+                max-width: 200px;
+                padding: 4px;
+                border-radius: 5px;
+                color: #183357;
+                font-weight: 600;
+            }
+
+            .card .message {
+                max-width: 500px;
+                padding: 4px;
+                border-radius: 5px;
+                font-weight: 600;
+                color: #c73336;
+                /* background-color: #c73336; */
+
+            }
+        </style>
+    </head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo"><img src="images/CHALLAN INFO.png"></a>
+
+        <nav class="navbar">
+
+            </li>
+            <div id="nav-close" class="fas fa-times"></div>
+            <a href="Admin.php">home</a>
+        </nav>
+        <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+        </div>
+    </header>
+    <br><br><br><br>
+
+    <!-- Card Section -->
+    <h1>User's Feedbak</h1>
+    <div class="card-container" id="cardContainer"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: 'index.php', // Change the URL to Challan_History.php
+                type: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    data.forEach(function (item) {
+                        var card = '<div class="card">';
+                        card += '<h2>Name: ' + item.name + '</h2>';
+                        card += '<p class="info">Email: ' + item.enrollnment + '</p>';
+                        card += '<p class="info">Phone: ' + item.start_date + '</p>';
+                        card += '<p class="subject">Subject: ' + item.end_date + '</p>';
+                        card += '<p class="message">Message: ' + item.duration + '</p>';
+                        card += '<p class="message">Message: ' + item.reason + '</p>';
+                        card += '</div>';
+                        $('#cardContainer').append(card);
+                    });
+                },
+                error: function (xhr, status, error) {
+                    console.error('Error fetching data:', error);
+                }
+            });
+        });
+    </script>
+    </section>
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>Quick links</h3>
+                <a href="Admin.php">home</a>
+
+            </div>
+
+            <div class="box">
+                <h3>extra links</h3>
+                <a href="#contact">ask questions</a>
+                <a href="#">terms of use</a>
+                <a href="#">privacy policy</a>
+            </div>
+
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#"> <i class="fas fa-phone"></i> +91 9825486596 </a>
+                <a href="#"> <i class="fas fa-envelope"></i>darshan2003patel@gmail.com </a>
+            </div>
+
+            <div class="box">
+                <h3>follow us</h3>
+                <a href="https://www.instagram.com/yash_srivastav_"> <i class="fab fa-instagram"></i> instagram </a>
+                <a href="https://www.linkedin.com/in/yash-srivastav/"> <i class="fab fa-linkedin"></i> linkedin </a>
+                <a href="https://github.com/Yash-srivastav16"> <i class="fab fa-github"></i> github </a>
+            </div>
+        </div>
+        <div class="credit">created by <span>Darshan Patel</span> | all rights reserved!</div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+             *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+              }
+              .container{
+                  display: flex;
+              }
+              .leftcontainer{
+                  display: flex;
+                  flex-direction: column;
+                  gap: 1rem;
+                  width: 30%;
+                  background-color: rgb(255, 255, 255);
+                  height: 100vh;
+                  /* padding-top: 4rem;
+                  padding-left: 5rem; */
+              
+              }
+              .text {
+                  padding-top: 30px;
+                  padding-left: 50px;
+              }
+              
+              .s {
+                  padding-top: 20px;
+                  padding-left: 80px;
+              }
+              .t {
+                  padding-top: 20px;
+                  padding-left: 80px;
+              }
+              .leftcontainer h2 {
+                  font-size: 30px;
+              }
+              .Student{
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: center;
+                  align-items: center;
+                  max-width: 70%; 
+                  border: 2px solid black;
+                  border-radius: 1rem;
+                  text-decoration: none;
+                  padding: 1rem;
+                  color: black;
+                  gap: 1rem;
+                  font-size: larger;
+              }
+              .Student a{
+                  text-decoration: none;
+                  color: black;
+              
+              }
+              .Teacher{
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: center;
+                  align-items: center;
+                  max-width: 70%; 
+                  border: 2px solid black;
+                  border-radius: 1rem;
+                  text-decoration: none;
+                  padding: 1rem;
+                  color: black;
+                  gap: 1rem;
+                  font-size: larger;
+              }
+              .Teacher a{
+                  text-decoration: none;
+                  color: black;
+              
+              }
+              .Student:hover{
+                  border: 2px solid rgb(42, 42, 237);
+                  border-radius: 1rem;
+              }
+              
+              .Teacher:hover{
+                  border: 2px solid rgb(42, 42, 237);
+                  border-radius: 1rem;
+              
+              }
+              
+              .rightcontainer{
+                  width: 100% ;
+                  background-image: url("HomePage_Banner-2_Desktop-1.webp");
+                  background-size: cover;
+                  display: flex ;
+                  flex-direction: column;
+              }
+        </style>
+        
+    <title>Academia</title>
+    <link rel="icon"href="academiaerp-favicon-1-150x150.webp">
+</head>
+<body>
+    <div class="container">
+        <div class="leftcontainer">
+            <div class="text"><h2>Signin to Academia</h2></div>
+            <div class="s">
+                <div class="Student">
+                <i class="fa-solid fa-user-graduate"></i>
+                <a href="Login.html">Student</a>
+                <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+
+            <div class="t">
+                <div class="Teacher">
+                <i class="fa-solid fa-chalkboard-user"></i>
+                <a href="LoginD.html">Admin</a>
+                <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+        </div>
+        <div class="rightcontainer">
+            <div class="image">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
